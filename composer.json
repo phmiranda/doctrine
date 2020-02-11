@@ -1,0 +1,20 @@
+{
+    "name": "phmiranda/doctrine",
+    "description": "projeto base de estudo do orm doctrine",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "phmiranda",
+            "email": "pehhagah.1607@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alura\\Doctrine\\": "src/"
+        }
+    }
+}
