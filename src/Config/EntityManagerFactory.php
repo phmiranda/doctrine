@@ -5,11 +5,12 @@ namespace Alura\Doctrine\Config;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Tools\Setup;
+use Doctrine\ORM\ORMException;
 
 class EntityManagerFactory {
     /**
      * @return EntityManagerInterface
-     * @throws \Doctrine\ORM\ORMException
+     * @throws ORMException
      */
     public function getEntityManager() : EntityManagerInterface {
         $rootDir = __DIR__.'/../..';
