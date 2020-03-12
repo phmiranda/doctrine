@@ -14,10 +14,15 @@ class EntityManagerFactory {
      */
     public function getEntityManager() : EntityManagerInterface {
         $rootDir = __DIR__.'/../..';
-        $config = Setup::createAnnotationMetadataConfiguration($rootDir.'/src',true);
+        $config = Setup::createAnnotationMetadataConfiguration([$rootDir.'/src'],true);
         $connection = [
-            'dbname' => 'db_doctrine.sqlite',
-            'path' => $rootDir.'/storage/db_doctrine.sqlite',
+            'driver' => 'pdo_mysql',
+            'dbname' => 'db_doctrine',
+            'host' => 'localhost',
+            'user' => 'root',
+            'password' => 'root',
+            //'driver' => 'pdo_sqlite',
+            //'path' => $rootDir.'/storage/db_doctrine.sqlite',
         ];
         return EntityManager::create($connection, $config);
     }

@@ -3,9 +3,21 @@
 
 namespace Alura\Doctrine\Entity;
 
-
+/**
+ * @Entity
+ * @Table(name="alunos")
+ */
 class Aluno {
+    /**
+     * @Id
+     * @GeneratedValue
+     * @Column(type="integer")
+     */
     private $id;
+
+    /**
+     * @Column(type="string")
+     */
     private $nome;
 
     public function getId() : int {
@@ -16,7 +28,7 @@ class Aluno {
         return $this->nome;
     }
 
-    public function setNome($nome) {
+    public function setNome( string $nome) : self {
         $this->nome = $nome;
     }
 }
