@@ -28,7 +28,7 @@ class Aluno {
         return $this->nome;
     }
 
-    public function setNome( string $nome) : self {
+    public function setNome( string $nome) : string {
         $this->nome = $nome;
     }
 }
