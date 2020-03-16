@@ -20,15 +20,15 @@ class Aluno {
      */
     private $nome;
 
-    public function getId() : int {
+    public function getId() {
         return $this->id;
     }
 
-    public function getNome() : string {
+    public function getNome() {
         return $this->nome;
     }
 
-    public function setNome( string $nome) : string {
+    public function setNome( string $nome) {
         $this->nome = $nome;
     }
 }
